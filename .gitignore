@@ -4,7 +4,7 @@
 
 # Ignore configuration files that may contain sensitive information
 #/public_html/sites/*/*settings*.php
-/public_html/sites/*/*services*.yml
+#/public_html/sites/*/*services*.yml
 
 # Ignore paths that may contain user-generated content
 /public_html/sites/*/files
