@@ -263,6 +263,8 @@ $databases = [];
  */
 # $settings['config_sync_directory'] = '/directory/outside/webroot';
 
+  $settings['config_sync_directory'] = '../config/sync';
+
 /**
  * Settings:
  *
@@ -290,7 +292,8 @@ $databases = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '';
+
+$settings['hash_salt'] = 'UMQIZqaDywtxZzRJguBMpskpIcnIUwoVilBpVPtrWOZkgbuwYtMkCZgckodIYzva';
 
 /**
  * Deployment identifier.
@@ -523,6 +526,8 @@ $settings['update_free_access'] = FALSE;
  * about securing private files.
  */
 # $settings['file_private_path'] = '';
+
+$settings['file_private_path'] = '../private';
 
 /**
  * Temporary file path:
@@ -757,8 +762,14 @@ $settings['entity_update_backup'] = TRUE;
 $settings['migrate_node_migrate_type_classic'] = FALSE;
 
 // Automatically generated include for settings managed by ddev.
+//if (file_exists(__DIR__ . '/settings.ddev.php') && getenv('IS_DDEV_PROJECT') == 'true') {
+//  include __DIR__ . '/settings.ddev.php';
+//}
+
 if (file_exists(__DIR__ . '/settings.ddev.php') && getenv('IS_DDEV_PROJECT') == 'true') {
   include __DIR__ . '/settings.ddev.php';
+} else {
+  include __DIR__ . '/settings.prod.php';
 }
 
 /**
