@@ -24,12 +24,14 @@
 # Ignore drupal core (if not versioning drupal sources)
 /public_html/core
 /public_html/modules/README.txt
+/public_html/modules/contrib
 /public_html/profiles/README.txt
 /public_html/sites/README.txt
 /public_html/sites/example.sites.php
 /public_html/sites/example.settings.local.php
 /public_html/sites/development.services.yml
 /public_html/themes/README.txt
+/public_html/themes/*
 /vendor
 /public_html/.csslintrc
 /.editorconfig
